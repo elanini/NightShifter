@@ -1,13 +1,28 @@
 //
 //  main.m
-//  NightShifter
+//  nightshifter
 //
-//  Created by Eric Lanini on 6/11/17.
+//  Created by Eric Lanini on 6/12/17.
 //  Copyright © 2017 Eric Lanini. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+#import <Foundation/Foundation.h>
+#import "NightShifterCommandLine.h"
+
+
 
 int main(int argc, const char * argv[]) {
-    return NSApplicationMain(argc, argv);
+    @autoreleasepool {
+        NSArray <NSString*>*args = [[NSProcessInfo processInfo] arguments];
+        NightShifterCommandLine *cmd = [[NightShifterCommandLine alloc] initWithArgs:args];
+        BOOL ret = [cmd parse];
+        if (ret == NO) {
+            return 1;
+        }
+        
+        return [cmd run];
+    }
+    return 0;
 }
+
+
