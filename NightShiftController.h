@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  NightShiftController.h
 //  NightShifter
 //
 //  Created by Eric Lanini on 6/11/17.
@@ -8,8 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface ViewController : NSViewController
-
+@interface NightShiftController : NSViewController
 
 @end
-

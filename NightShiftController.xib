@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12120"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NightShiftController">
+            <connections>
+                <outlet property="strengthSlider" destination="9og-P3-8dq" id="5qE-a7-VT1"/>
+                <outlet property="toggleButton" destination="iBI-42-7gn" id="bWb-FD-eA3"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView misplaced="YES" id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="34" height="140"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <button misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iBI-42-7gn">
+                    <rect key="frame" x="8" y="115" width="19" height="18"/>
+                    <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="YWE-rF-rfB">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="toggleEnable:" target="-2" id="T5G-Cv-95z"/>
+                    </connections>
+                </button>
+                <slider horizontalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9og-P3-8dq">
+                    <rect key="frame" x="8" y="11" width="19" height="100"/>
+                    <sliderCell key="cell" continuous="YES" alignment="left" maxValue="1" doubleValue="0.5" tickMarkPosition="right" sliderType="linear" id="xxb-s9-jsz"/>
+                    <connections>
+                        <action selector="sliderChanged:" target="-2" id="nCS-Nz-X5t"/>
+                    </connections>
+                </slider>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="9og-P3-8dq" secondAttribute="trailing" constant="10" id="FYJ-RM-ZiE"/>
+                <constraint firstItem="9og-P3-8dq" firstAttribute="top" secondItem="iBI-42-7gn" secondAttribute="bottom" constant="10" id="PSz-ly-p5M"/>
+                <constraint firstItem="9og-P3-8dq" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="10" id="TUE-hH-E1S"/>
+                <constraint firstAttribute="trailing" secondItem="iBI-42-7gn" secondAttribute="trailing" constant="10" id="Vb1-gd-qDG"/>
+                <constraint firstItem="iBI-42-7gn" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="10" id="b8P-FM-o61"/>
+                <constraint firstItem="iBI-42-7gn" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="10" id="dVc-1L-L0D"/>
+                <constraint firstAttribute="bottom" secondItem="9og-P3-8dq" secondAttribute="bottom" constant="10" id="tpz-I0-xdx"/>
+            </constraints>
+            <point key="canvasLocation" x="22" y="38"/>
+        </customView>
+    </objects>
+</document>
