@@ -15,12 +15,12 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customView misplaced="YES" id="Hz6-mo-xeY">
-            <rect key="frame" x="0.0" y="0.0" width="34" height="140"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="37" height="148"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <button misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iBI-42-7gn">
-                    <rect key="frame" x="8" y="115" width="19" height="18"/>
+                    <rect key="frame" x="8" y="123" width="19" height="18"/>
                     <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="YWE-rF-rfB">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                         <font key="font" metaFont="system"/>
@@ -29,8 +29,8 @@
                         <action selector="toggleEnable:" target="-2" id="T5G-Cv-95z"/>
                     </connections>
                 </button>
-                <slider horizontalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9og-P3-8dq">
-                    <rect key="frame" x="8" y="11" width="19" height="100"/>
+                <slider horizontalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9og-P3-8dq">
+                    <rect key="frame" x="8" y="7" width="21" height="109"/>
                     <sliderCell key="cell" continuous="YES" alignment="left" maxValue="1" doubleValue="0.5" tickMarkPosition="right" sliderType="linear" id="xxb-s9-jsz"/>
                     <connections>
                         <action selector="sliderChanged:" target="-2" id="nCS-Nz-X5t"/>
@@ -44,9 +44,9 @@
                 <constraint firstAttribute="trailing" secondItem="iBI-42-7gn" secondAttribute="trailing" constant="10" id="Vb1-gd-qDG"/>
                 <constraint firstItem="iBI-42-7gn" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="10" id="b8P-FM-o61"/>
                 <constraint firstItem="iBI-42-7gn" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="10" id="dVc-1L-L0D"/>
-                <constraint firstAttribute="bottom" secondItem="9og-P3-8dq" secondAttribute="bottom" constant="10" id="tpz-I0-xdx"/>
+                <constraint firstAttribute="bottom" secondItem="9og-P3-8dq" secondAttribute="bottom" constant="10" id="jfa-rK-aDX"/>
             </constraints>
-            <point key="canvasLocation" x="22" y="38"/>
+            <point key="canvasLocation" x="23.5" y="45.5"/>
         </customView>
     </objects>
 </document>

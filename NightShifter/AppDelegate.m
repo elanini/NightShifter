@@ -24,6 +24,11 @@
     self.statusItem.button.action = @selector(togglePopover:);
     // Insert code here to initialize your application
     self.popover = [[NSPopover alloc] init];
+    [[NSApplication sharedApplication] activateIgnoringOtherApps:YES];
+    [self.popover setBehavior:NSPopoverBehaviorApplicationDefined];
+    [NSEvent addGlobalMonitorForEventsMatchingMask:NSEventMaskLeftMouseDown|NSEventMaskRightMouseDown handler:^(NSEvent * _Nonnull e) {
+        [self closePopover];
+    }];
     [self.popover setContentViewController:[[NightShiftController alloc] initWithNibName:@"NightShiftController" bundle:nil]];
 }
 
@@ -42,6 +47,16 @@
     } else {
         [self showPopover];
     }
+}
+
+-(void)applicationWillHide:(NSNotification *)notification
+{
+    NSLog(@"app will hide");
+}
+
+-(void)applicationDidResignActive:(NSNotification *)notification
+{
+    NSLog(@"did resign active");
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
