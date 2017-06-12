@@ -7,7 +7,7 @@
 //
 
 #import "NightShifterCommandLine.h"
-#import "CBBlueLightClient.h"
+#import "../CBBlueLightClient.h"
 
 typedef enum {
     NSVerbGet,

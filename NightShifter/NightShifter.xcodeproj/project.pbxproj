@@ -14,22 +14,7 @@
 		0701A2B71EEE037F00E0D9E4 /* NightShiftController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0701A2B51EEE037F00E0D9E4 /* NightShiftController.m */; };
 		0701A2B81EEE037F00E0D9E4 /* NightShiftController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0701A2B61EEE037F00E0D9E4 /* NightShiftController.xib */; };
 		0701A2BB1EEE07D300E0D9E4 /* CoreBrightness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0701A2BA1EEE07D300E0D9E4 /* CoreBrightness.framework */; };
-		07A369571EEF04B900103EF2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A369561EEF04B900103EF2 /* main.m */; };
-		07A3695D1EEF079400103EF2 /* NightShifterCommandLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A3695C1EEF079400103EF2 /* NightShifterCommandLine.m */; };
-		07A3695E1EEF116B00103EF2 /* CoreBrightness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0701A2BA1EEE07D300E0D9E4 /* CoreBrightness.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		07A369521EEF04B900103EF2 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0701A29D1EEE005900E0D9E4 /* NightShifter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NightShifter.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,11 +28,7 @@
 		0701A2B51EEE037F00E0D9E4 /* NightShiftController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NightShiftController.m; path = ../NightShiftController.m; sourceTree = "<group>"; };
 		0701A2B61EEE037F00E0D9E4 /* NightShiftController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NightShiftController.xib; path = ../NightShiftController.xib; sourceTree = "<group>"; };
 		0701A2BA1EEE07D300E0D9E4 /* CoreBrightness.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBrightness.framework; path = ../../../../System/Library/PrivateFrameworks/CoreBrightness.framework; sourceTree = "<group>"; };
-		0701A2BC1EEE0EEB00E0D9E4 /* CBBlueLightClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBBlueLightClient.h; sourceTree = "<group>"; };
-		07A369541EEF04B900103EF2 /* shifter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = shifter; sourceTree = BUILT_PRODUCTS_DIR; };
-		07A369561EEF04B900103EF2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		07A3695B1EEF079400103EF2 /* NightShifterCommandLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NightShifterCommandLine.h; sourceTree = "<group>"; };
-		07A3695C1EEF079400103EF2 /* NightShifterCommandLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NightShifterCommandLine.m; sourceTree = "<group>"; };
+		07A369791EEF1D5B00103EF2 /* CBBlueLightClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBBlueLightClient.h; path = ../../CBBlueLightClient.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,14 +40,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		07A369511EEF04B900103EF2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				07A3695E1EEF116B00103EF2 /* CoreBrightness.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -74,7 +47,6 @@
 			isa = PBXGroup;
 			children = (
 				0701A29F1EEE005900E0D9E4 /* NightShifter */,
-				07A369551EEF04B900103EF2 /* shifter */,
 				0701A29E1EEE005900E0D9E4 /* Products */,
 				0701A2B91EEE07D300E0D9E4 /* Frameworks */,
 			);
@@ -84,7 +56,6 @@
 			isa = PBXGroup;
 			children = (
 				0701A29D1EEE005900E0D9E4 /* NightShifter.app */,
-				07A369541EEF04B900103EF2 /* shifter */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -92,12 +63,12 @@
 		0701A29F1EEE005900E0D9E4 /* NightShifter */ = {
 			isa = PBXGroup;
 			children = (
+				07A369791EEF1D5B00103EF2 /* CBBlueLightClient.h */,
 				0701A2A01EEE005900E0D9E4 /* AppDelegate.h */,
 				0701A2A11EEE005900E0D9E4 /* AppDelegate.m */,
 				0701A2B41EEE037F00E0D9E4 /* NightShiftController.h */,
 				0701A2B51EEE037F00E0D9E4 /* NightShiftController.m */,
 				0701A2B61EEE037F00E0D9E4 /* NightShiftController.xib */,
-				0701A2BC1EEE0EEB00E0D9E4 /* CBBlueLightClient.h */,
 				0701A2A91EEE005900E0D9E4 /* Assets.xcassets */,
 				0701A2AB1EEE005900E0D9E4 /* Main.storyboard */,
 				0701A2AE1EEE005900E0D9E4 /* Info.plist */,
@@ -122,17 +93,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		07A369551EEF04B900103EF2 /* shifter */ = {
-			isa = PBXGroup;
-			children = (
-				07A369561EEF04B900103EF2 /* main.m */,
-				07A3695B1EEF079400103EF2 /* NightShifterCommandLine.h */,
-				07A3695C1EEF079400103EF2 /* NightShifterCommandLine.m */,
-			);
-			name = shifter;
-			path = nightshifter;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -153,23 +113,6 @@
 			productReference = 0701A29D1EEE005900E0D9E4 /* NightShifter.app */;
 			productType = "com.apple.product-type.application";
 		};
-		07A369531EEF04B900103EF2 /* shifter */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 07A369581EEF04B900103EF2 /* Build configuration list for PBXNativeTarget "shifter" */;
-			buildPhases = (
-				07A369501EEF04B900103EF2 /* Sources */,
-				07A369511EEF04B900103EF2 /* Frameworks */,
-				07A369521EEF04B900103EF2 /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = shifter;
-			productName = nightshifter;
-			productReference = 07A369541EEF04B900103EF2 /* shifter */;
-			productType = "com.apple.product-type.tool";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -189,11 +132,6 @@
 							};
 						};
 					};
-					07A369531EEF04B900103EF2 = {
-						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = L6ZT8BRWQB;
-						ProvisioningStyle = Automatic;
-					};
 				};
 			};
 			buildConfigurationList = 0701A2981EEE005900E0D9E4 /* Build configuration list for PBXProject "NightShifter" */;
@@ -210,7 +148,6 @@
 			projectRoot = "";
 			targets = (
 				0701A29C1EEE005900E0D9E4 /* NightShifter */,
-				07A369531EEF04B900103EF2 /* shifter */,
 			);
 		};
 /* End PBXProject section */
@@ -236,15 +173,6 @@
 				0701A2B71EEE037F00E0D9E4 /* NightShiftController.m in Sources */,
 				0701A2A51EEE005900E0D9E4 /* main.m in Sources */,
 				0701A2A21EEE005900E0D9E4 /* AppDelegate.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		07A369501EEF04B900103EF2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				07A3695D1EEF079400103EF2 /* NightShifterCommandLine.m in Sources */,
-				07A369571EEF04B900103EF2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,30 +321,6 @@
 			};
 			name = Release;
 		};
-		07A369591EEF04B900103EF2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEVELOPMENT_TEAM = L6ZT8BRWQB;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		07A3695A1EEF04B900103EF2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEVELOPMENT_TEAM = L6ZT8BRWQB;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -437,14 +341,6 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
-		};
-		07A369581EEF04B900103EF2 /* Build configuration list for PBXNativeTarget "shifter" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				07A369591EEF04B900103EF2 /* Debug */,
-				07A3695A1EEF04B900103EF2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

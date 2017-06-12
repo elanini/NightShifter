@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "NightShifterCommandLine.h"
+#import "../NightShifterCommandLine.h"
 
 
 
