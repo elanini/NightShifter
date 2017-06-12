@@ -15,13 +15,17 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customView id="Hz6-mo-xeY">
-            <rect key="frame" x="0.0" y="0.0" width="37" height="148"/>
+        <customView misplaced="YES" id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="43" height="184"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <button misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iBI-42-7gn">
-                    <rect key="frame" x="8" y="123" width="19" height="18"/>
-                    <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="YWE-rF-rfB">
+                <button translatesAutoresizingMaskIntoConstraints="NO" id="iBI-42-7gn">
+                    <rect key="frame" x="8" y="150" width="26" height="26"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="22" id="ChN-hZ-99Q"/>
+                        <constraint firstAttribute="height" constant="22" id="Dmo-YF-Wxa"/>
+                    </constraints>
+                    <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="only" state="on" inset="2" id="YWE-rF-rfB">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
@@ -30,23 +34,44 @@
                     </connections>
                 </button>
                 <slider horizontalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9og-P3-8dq">
-                    <rect key="frame" x="8" y="7" width="21" height="109"/>
+                    <rect key="frame" x="8" y="41" width="26" height="105"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="H8X-fX-8vp"/>
+                    </constraints>
                     <sliderCell key="cell" continuous="YES" alignment="left" maxValue="1" doubleValue="0.5" tickMarkPosition="right" sliderType="linear" id="xxb-s9-jsz"/>
                     <connections>
                         <action selector="sliderChanged:" target="-2" id="nCS-Nz-X5t"/>
                     </connections>
                 </slider>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="m7h-kB-Tae">
+                    <rect key="frame" x="4" y="5" width="36" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="24" id="gt1-6i-xr9"/>
+                        <constraint firstAttribute="height" constant="24" id="in3-DQ-6rh"/>
+                    </constraints>
+                    <buttonCell key="cell" type="push" title="Q" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="ceZ-j9-vLX">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system" size="10"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="quitButton:" target="-2" id="lb6-3x-ZOT"/>
+                    </connections>
+                </button>
             </subviews>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="9og-P3-8dq" secondAttribute="trailing" constant="10" id="FYJ-RM-ZiE"/>
-                <constraint firstItem="9og-P3-8dq" firstAttribute="top" secondItem="iBI-42-7gn" secondAttribute="bottom" constant="10" id="PSz-ly-p5M"/>
+                <constraint firstItem="9og-P3-8dq" firstAttribute="top" secondItem="iBI-42-7gn" secondAttribute="bottom" constant="8" id="PSz-ly-p5M"/>
                 <constraint firstItem="9og-P3-8dq" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="10" id="TUE-hH-E1S"/>
                 <constraint firstAttribute="trailing" secondItem="iBI-42-7gn" secondAttribute="trailing" constant="10" id="Vb1-gd-qDG"/>
+                <constraint firstAttribute="trailing" secondItem="m7h-kB-Tae" secondAttribute="trailing" constant="8" id="ZCc-uK-Ntv"/>
                 <constraint firstItem="iBI-42-7gn" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="10" id="b8P-FM-o61"/>
                 <constraint firstItem="iBI-42-7gn" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="10" id="dVc-1L-L0D"/>
-                <constraint firstAttribute="bottom" secondItem="9og-P3-8dq" secondAttribute="bottom" constant="10" id="jfa-rK-aDX"/>
+                <constraint firstItem="m7h-kB-Tae" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="10" id="e29-GX-ELG"/>
+                <constraint firstItem="iBI-42-7gn" firstAttribute="width" secondItem="9og-P3-8dq" secondAttribute="width" id="i4j-Ju-G8g"/>
+                <constraint firstAttribute="bottom" secondItem="m7h-kB-Tae" secondAttribute="bottom" constant="12" id="jIK-pL-MMe"/>
+                <constraint firstItem="m7h-kB-Tae" firstAttribute="top" secondItem="9og-P3-8dq" secondAttribute="bottom" constant="8" id="zKb-Il-W89"/>
             </constraints>
-            <point key="canvasLocation" x="23.5" y="45.5"/>
+            <point key="canvasLocation" x="55.5" y="27"/>
         </customView>
     </objects>
 </document>

@@ -21,6 +21,9 @@
 @end
 
 @implementation NightShiftController
+- (IBAction)quitButton:(id)sender {
+    [NSApp terminate:nil];
+}
 - (IBAction)sliderChanged:(id)sender {
     [self.blueLight setStrength:self.strengthSlider.floatValue commit:YES];
 }
