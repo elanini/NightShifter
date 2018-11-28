@@ -10,6 +10,7 @@
 #import "../CBBlueLightClient.h"
 
 typedef enum {
+    NSVerStatus,
     NSVerbGet,
     NSVerbSet,
     NSVerbOn,
@@ -39,6 +40,19 @@ typedef enum {
 
 -(int)run {
     switch (self.verb) {
+        case NSVerStatus: {
+            StatusData str;
+            BOOL ret = [self.blueLight getBlueLightStatus:&str];
+            if (ret) {
+                int enabled = str.enabled;
+                if (enabled == 1) {
+                    printf("on\n");
+                } else if (enabled == 0) {
+                    printf("off\n");
+                }
+                return ret;
+            }
+        };
         case NSVerbOn: return [self.blueLight setEnabled:YES];
         case NSVerbOff: return [self.blueLight setEnabled:NO];
         case NSVerbSet: return [self.blueLight setStrength:self.amount commit:YES];
@@ -82,14 +96,16 @@ void perr(char *str) {
         return YES;
     }
     
-    if ([self.args[1] isEqualToString:@"get"]) {
+    if ([self.args[1] isEqualToString:@"status"]) {
+        self.verb = NSVerStatus;
+    } else if  ([self.args[1] isEqualToString:@"get"]) {
         self.verb = NSVerbGet;
     } else if  ([self.args[1] isEqualToString:@"on"]) {
         self.verb = NSVerbOn;
     } else if  ([self.args[1] isEqualToString:@"off"]) {
         self.verb = NSVerbOff;
     } else {
-        perr("allowed verbs on, off, set, get");
+        perr("allowed verbs status, on, off, set, get");
         return NO;
     }
     return YES;
